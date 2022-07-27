@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import routes from './routes';
 import LogoWhite from '@images/img/logo-white.png';
-import jquery from 'jquery';
+import jQuery from 'jquery';
 
 export default function Nav() {
   const hamburger = useRef(null);
@@ -14,17 +14,17 @@ export default function Nav() {
   }
 
   function updateNavigation() {
-    jquery('.section').each(function () {
-      const activeSection = jquery(`#dot-nav a[href="#${jquery(this).attr('id')}"]`).data('number');
-      const offsetTop = jquery(this).offset().top;
-      const halfWindowHeight = jquery(window).height() / 2;
-      const distanceFromTop = jquery(window).scrollTop();
+    jQuery('.section').each(function () {
+      const activeSection = jQuery(`#dot-nav a[href="#${jQuery(this).attr('id')}"]`).data('number');
+      const offsetTop = jQuery(this).offset().top;
+      const halfWindowHeight = jQuery(window).height() / 2;
+      const distanceFromTop = jQuery(window).scrollTop();
       const cond1 = offsetTop - halfWindowHeight < distanceFromTop;
-      const cond2 = offsetTop + jquery(this).height() - halfWindowHeight > distanceFromTop;
+      const cond2 = offsetTop + jQuery(this).height() - halfWindowHeight > distanceFromTop;
       if (cond1 && cond2) {
-        jquery('#dot-nav a').eq(activeSection).addClass('is-selected');
+        jQuery('#dot-nav a').eq(activeSection).addClass('is-selected');
       } else {
-        jquery('#dot-nav a').eq(activeSection).removeClass('is-selected');
+        jQuery('#dot-nav a').eq(activeSection).removeClass('is-selected');
       }
     });
   }

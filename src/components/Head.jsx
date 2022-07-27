@@ -56,8 +56,6 @@ const Head = ({ title, description, image }) => {
 
       {/* <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" /> */}
 
-      <script src="/js/jquery-3.6.0.min.js"></script>
-
       <script src={`/js/main.js`} defer></script>
     </Helmet>
   );
